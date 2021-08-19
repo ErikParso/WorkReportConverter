@@ -36,6 +36,7 @@ namespace WorkReportConverter
 						if (workReportRow.Day.Year == configuration.Year && workReportRow.Month == configuration.Month)
 							workReportRows.Add(workReportRow);
 					}
+					workReportRows.Reverse();
 					workbook.Close();
 				}
 
