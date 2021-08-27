@@ -1,9 +1,8 @@
 {
-	"ResourceName": "Parso, Erik",
-	"Project": "K2NG & Tools - Agile",
-	"Role": "IT Developer",
-	"Category": "Vyvoj",
-	"Team": "A",
+	"Name": "Erik Parso",
+	"Project": "K2NG & Tools I",
+	"Role": "Developer",
+	"Category": "PBI/Bug",
 	"Source": "workReport.xls",
 	"Destination": "K2NG&Tools_TimeSheet_ParsoErik",
 	"Year": 2021,

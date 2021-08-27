@@ -24,6 +24,6 @@ I Was working on these tasks. (PBI: 000000, 111111) (TASK: XXXXXX, YYYYYY) (SPRI
 
 Results in:
 
- Task 				 | PBU/BUG	  | Task	    | Sprint
------------------------------------------------------------------------------
- I Was working on these tasks.   | 000000, 111111 | XXXXXX, YYYYYY  | 0X.Y
+ Task 				              | PBU/BUG	       | Task	         | Sprint
+------------------------------------------------------------------------------
+ I Was working on these tasks.    | 000000, 111111 | XXXXXX, YYYYYY  | 0X.Y

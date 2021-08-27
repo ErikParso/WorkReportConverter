@@ -33,7 +33,7 @@ namespace WorkReportConverter
 					foreach (var row in rows.Skip(1))
 					{
 						var workReportRow = MakeWorkReportRow(row);
-						if (workReportRow.Day.Year == configuration.Year && workReportRow.Month == configuration.Month)
+						if (workReportRow.Date.Year == configuration.Year && workReportRow.Date.Month == configuration.Month)
 							workReportRows.Add(workReportRow);
 					}
 					workReportRows.Reverse();
@@ -80,18 +80,15 @@ namespace WorkReportConverter
 			return new WorkReportRow()
 			{
 				Category = configuration.Category,
-				Day = row.Cells[0].DateTime,
+				Date = row.Cells[0].DateTime,
 				Effort = row.Cells[3].Number,
-				Month = row.Cells[0].DateTime.Month,
 				PBIID = parsedDescription[1],
 				TaskID = parsedDescription[2],
 				Sprint = parsedDescription[0],
-				Task = parsedDescription[3],
+				TaskDescription = parsedDescription[3],
 				Project = configuration.Project,
-				ResourceName = configuration.ResourceName,
-				Role = configuration.Role,
-				Team = configuration.Team,
-				Week = GetWeekNumberOfMonth(row.Cells[0].DateTime)
+				Name = configuration.Name,
+				Role = configuration.Role			
 			};
 		}
 
