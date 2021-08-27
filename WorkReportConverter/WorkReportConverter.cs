@@ -42,9 +42,12 @@ namespace WorkReportConverter
 
 				var monthFilePostfix = configuration.Year + ("0" + configuration.Month)[^2..];
 				var destinationFileName = configuration.Destination + "_" + monthFilePostfix + ".xlsx";
+				var templateFile = "./template.xlsx";
+				File.Copy(templateFile, destinationFileName, true);
+				
 				using (var stream = new FileStream(destinationFileName, FileMode.OpenOrCreate))
 				{
-					IWorkbook workbook = app.Workbooks.Create();
+					var workbook = app.Workbooks.Open(stream, ExcelOpenType.Automatic);
 					IWorksheet worksheet = workbook.Worksheets[0];
 					var properties = typeof(WorkReportRow).GetProperties();
 
